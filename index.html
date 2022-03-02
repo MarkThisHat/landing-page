@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
@@ -11,45 +10,51 @@
     <header>
         <h1>Header Logo</h1>
         <ol>
-            <li><a href="#">Header link one</a></li>
-            <li><a href="#">Header link two</a></li>
-            <li><a href="#">Header link three</a></li> 
+            <li><a href="#">header link one</a></li>
+            <li><a href="#">header link two</a></li>
+            <li><a href="#">header link three</a></li> 
         </ol>
     </header>
     <main>
         <div class="upper_block">
-            <h1>This Website is Awesome</h1>
-            <p>This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast</p>
-            <button>Sign Up</button>
-            <img src="" alt="">This is a placeholder for an image</img>
+            <div class="leftColumn">
+                <h1>This website is awesome</h1>
+                <p>This website has some subtext that goes here under the main title. It's a smaller font and the color is lower contrast</p>
+                <button id="HeaderSign"><a href="#">Sign Up</a></button>
+            </div>
+            <div class="rightColumn"><img src="https://i.kym-cdn.com/entries/icons/mobile/000/001/030/DButt.jpg" alt=""><!--This is a placeholder for an image--></div>
         </div>
         <div class="info_block">
-            <h1>Some random information</h1>
-            <div>
-                <img src="" alt="">
-                <p>this is some subtext under an ilustration or image</p>
-            </div>
-            <div>
-                <img src="" alt="">
-                <p>this is some subtext under an ilustration or image</p>
-            </div>
-            <div>
-                <img src="" alt="">
-                <p>this is some subtext under an ilustration or image</p>
-            </div>
-            <div>
-                <img src="" alt="">
-                <p>this is some subtext under an ilustration or image</p>
+            <h1 class="block_title">Some random information.</h1>
+            <div class="pictorama">
+                <div>
+                    <img src="https://i.kym-cdn.com/entries/icons/mobile/000/001/030/DButt.jpg" alt="">
+                    <p>this is some subtext under an ilustration or image</p>
+                </div>
+                <div>
+                    <img src="https://i.kym-cdn.com/entries/icons/mobile/000/001/030/DButt.jpg" alt="">
+                    <p>this is some subtext under an ilustration or image</p>
+                </div>
+                <div>
+                    <img src="https://i.kym-cdn.com/entries/icons/mobile/000/001/030/DButt.jpg" alt="">
+                    <p>this is some subtext under an ilustration or image</p>
+                </div>
+                <div>
+                    <img src="https://i.kym-cdn.com/entries/icons/mobile/000/001/030/DButt.jpg" alt="">
+                    <p>this is some subtext under an ilustration or image</p>
+                </div>
             </div>
         </div>
         <div class="quote_block">
-            "We've added <span>years</span> to life, not <span>life to years</span>"
-            - George Carlin
+            <p class="quote">"We've added <span>years </span>to life, not <span>life to years</span>."</p>
+            <p class="author">- George Carlin</p>
         </div>
         <div class="signup_block">
-            <h1>Call to action!It's time!</h1>
-            <p>Sign up for our product by clicking that button right over there</p>
-            <button>Sign up</button>
+            <div class="invite">
+                <h1>Call to action!It's time!</h1>
+                <p>Sign up for our product by clicking that button right over there</p>
+            </div>
+            <div><button><a href="#">Sign up</a></button></div>
         </div>
     </main>
     <footer>

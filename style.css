@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #e5e7eb;
+    font: 18px;
+}
+
+ol {
+    list-style: none;    
+    display: flex;
+    gap: 16px;
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    background: #1F2937;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 13% 5% 13%;
+}
+
+header h1 {
+    color: #F9FAF8;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+#HeaderSign {
+    border: solid #1F2937;
+    margin-top: 8px;
+    margin-left: -4px;
+}
+
+.upper_block {
+    background-color: #1F2937;
+    display: flex;
+    gap: 8%;
+    padding: 8px 13% 150px 13%;
+}
+
+.upper_block h1 {
+    color: #F9FAF8;
+    font: 900 48px Roboto;
+    
+}
+
+.upper_block p {
+    color:  #e5e7eb;
+    font: 18px;
+}
+
+.leftColumn,
+.rightColumn {
+    align-self: flex-end;
+}
+
+.rightColumn img {
+    height: 250px;
+    width: 600px;
+}
+
+.info_block {
+    color: #1F2937;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 20% 150px 20%;
+}
+
+.block_title {
+    font: 900 36px Roboto;
+    padding-bottom: 64px;
+}
+
+.pictorama {
+    display: flex;
+    gap: 32px;
+}
+
+.pictorama p {
+    padding: 8px 2px 8px 2px;
+}
+
+
+.quote_block {
+    background: #e5e7eb;
+    color: #1F2937;
+    font: italic 36px Roboto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.author {
+    font-weight: bold;
+    text-align: right;
+    padding-right: 30%;
+}
+
+.quote {
+    padding-right: 30%;
+    text-align: right;
+}
+
+.signup_block {
+    background: #3882f6;
+    color: #F9FAF8;
+    font: 18px Roboto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    margin: 15%;
+    padding: 75px 200px 75px 200px;
+}
+
+
+button {
+    background: #3882f6;
+    color: #F9FAF8;
+    font: 700 18px Roboto;
+    border: 2px solid #F9FAF8;
+    border-radius: 10px;
+    padding: 8px 32px;
+}
+
+span {
+    font-weight: bold;
+}
+
+.pictorama img  {
+    width: 200px;
+    border: 4px solid #3882f6;
+    border-radius: 16px;
+    padding: 30px 0;
+}
+
+footer {
+    background: #1F2937;
+    color: #F9FAF8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 48px;
+}
