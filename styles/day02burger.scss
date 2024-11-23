@@ -1,0 +1,204 @@
+$menu-width: 112px;
+$menu-height: 72px;
+$line-height: 12px;
+$hover-increase: 8px;
+$line-spacing: ($menu-height - ($line-height)) / 2;
+$transition-duration: 0.7s;
+$transition-easing: cubic-bezier(0.30,1,0.70,1);
+$transition: #{$transition-duration} #{$transition-easing};
+
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+  overflow: hidden;
+  background: #fff;
+  color: #333;
+  font-family: 'Open Sans', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #3faf82;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.menu-checkbox {
+  display: none;
+}
+
+.menu-icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: $menu-height;
+  width: $menu-width;
+  cursor: pointer;
+  transition: height $transition, width $transition;
+  position: relative;
+
+  &:hover {
+    height: $menu-height + $hover-increase;
+  }
+
+  .menu-checkbox:checked + & {
+    &:hover {
+      height: $menu-height;
+      width: $menu-width + ($hover-increase * 2);
+    }
+  }
+}
+
+@mixin transform-line($translateY: 0, $rotateX: 0deg, $rotateY: 0deg, $rotateZ: 0deg, $opacity: 1) {
+  transform: translate3d(0, $translateY, 0) rotate3d(1, 0, 0, $rotateX) rotate3d(0, 1, 0, $rotateY) rotate3d(0, 0, 1, $rotateZ);
+  opacity: $opacity;
+}
+
+@mixin animation-line($animation-name) {
+  animation: #{$animation-name} $transition forwards;
+}
+
+.line {
+  width: 100%;
+  height: $line-height;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px 0 rgba(0, 0, 0, 0.3);
+  transition: transform $transition, opacity $transition;
+  transform-origin: center;
+
+  &:nth-child(1) {
+    @include transform-line(0, 0deg);
+  }
+
+  &:nth-child(2) {
+    @include transform-line(0, 0deg);
+  }
+
+  &:nth-child(3) {
+    @include transform-line(0, 0deg);
+  }
+
+  .menu-checkbox:checked + .menu-icon & {
+    &:nth-child(1) {
+      @include animation-line(animate-line-1);
+    }
+
+    &:nth-child(2) {
+      @include animation-line(animate-line-2);
+    }
+
+    &:nth-child(3) {
+      @include animation-line(animate-line-3);
+    }
+  }
+	
+  .menu-checkbox:not(:checked) + .menu-icon & {
+    &:nth-child(1) {
+      @include animation-line(animate-line-1-rev);
+    }
+
+    &:nth-child(2) {
+      @include animation-line(animate-line-2-rev);
+    }
+
+    &:nth-child(3) {
+      @include animation-line(animate-line-3-rev);
+    }
+  }
+}
+
+@keyframes animate-line-1 {
+  0% {
+    @include transform-line(0, 0deg, 0deg, 0deg);
+  }
+  50% {
+    @include transform-line($line-spacing, 0deg, 0deg, 0deg);
+  }
+  100% {
+    @include transform-line($line-spacing, 0deg, 0deg, 45deg);
+  }
+}
+
+@keyframes animate-line-1-rev {
+  0% {
+    @include transform-line($line-spacing, 0deg, 0deg, 45deg);
+  }
+  50% {
+    @include transform-line($line-spacing, 0deg, 0deg, 0deg);
+  }
+  100% {
+    @include transform-line(0, 0deg, 0deg, 0deg);
+  }
+}
+
+@keyframes animate-line-2 {
+  0% {
+    @include transform-line(0, 0deg, 0deg, 0deg, 1);
+  }
+  50% {
+    @include transform-line(0, 0deg, 0deg, 0deg, 1);
+  }
+  100% {
+    @include transform-line(0, 0deg, 0deg, 45deg, 0);
+  }
+}
+
+@keyframes animate-line-2-rev {
+  0% {
+    @include transform-line(0, 0deg, 0deg, 45deg, 1);
+  }
+  50% {
+    @include transform-line(0, 0deg, 0deg, 0deg, 1);
+  }
+  100% {
+    @include transform-line(0, 0deg, 0deg, 0deg, 1);
+  }
+}
+
+@keyframes animate-line-3 {
+  0% {
+    @include transform-line(0, 0deg, 0deg, 0deg);
+  }
+  50% {
+    @include transform-line(-$line-spacing, 0deg, 0deg, 0deg);
+  }
+  100% {
+    @include transform-line(-$line-spacing, 0deg, 0deg, 135deg);
+  }
+}
+
+@keyframes animate-line-3-rev {
+  0% {
+    @include transform-line(-$line-spacing, 0deg, 0deg, 135deg);
+  }
+  50% {
+    @include transform-line(-$line-spacing, 0deg, 0deg, 0deg);
+  }
+  100% {
+    @include transform-line(0, 0deg, 0deg, 0deg);
+  }
+}
+/*
+
+<div class="frame">
+  <div class="center">
+    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
+    <label for="menu-toggle" class="menu-icon">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </label>
+  </div>
+</div>
+*/
