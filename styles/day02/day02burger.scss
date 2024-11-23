@@ -2,7 +2,7 @@ $menu-width: 112px;
 $menu-height: 72px;
 $line-height: 12px;
 $hover-increase: 8px;
-$line-spacing: ($menu-height - ($line-height)) / 2;
+$line-spacing: calc(($menu-height - ($line-height)) / 2);
 $transition-duration: 0.7s;
 $transition-easing: cubic-bezier(0.30,1,0.70,1);
 $transition: #{$transition-duration} #{$transition-easing};
@@ -189,16 +189,3 @@ $transition: #{$transition-duration} #{$transition-easing};
     @include transform-line(0, 0deg, 0deg, 0deg);
   }
 }
-/*
-
-<div class="frame">
-  <div class="center">
-    <input type="checkbox" id="menu-toggle" class="menu-checkbox">
-    <label for="menu-toggle" class="menu-icon">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </label>
-  </div>
-</div>
-*/
