@@ -1,4 +1,4 @@
-$animation-time: 1.3s;
+$animation-time: 1.1s;
 $cubic-bezier: cubic-bezier(.21, .98, .6, .99);
 
 .frame {
@@ -23,7 +23,7 @@ $cubic-bezier: cubic-bezier(.21, .98, .6, .99);
 	left: 90px;
 }
 
-@for $i from 1 through 3 {
+@for $i from 1 through 4 {
 	.dot-#{$i} {
 		position: absolute;
 		width: 30px + ($i - 1) * 30px;
@@ -32,14 +32,14 @@ $cubic-bezier: cubic-bezier(.21, .98, .6, .99);
 		left: 95px - ($i - 1) * 15px;
 		background: #fff;
 		border-radius: 50%;
-		z-index: #{4 - $i};
+		z-index: #{5 - $i};
 		animation: jump-#{$i} $animation-time $cubic-bezier infinite alternate;
 		animation-fill-mode: both;
 	}
 }
 
-@for $i from 1 through 3 {
-	$percentage: 70 - ($i - 1) * 30;
+@for $i from 1 through 4 {
+	$percentage: 70 - ($i - 1) * calc(70 / (4 - 1));
 
 	@keyframes jump-#{$i} {
 		0%, #{$percentage}% {

@@ -28,8 +28,8 @@
   left: 95px;
   background: #fff;
   border-radius: 50%;
-  z-index: 3;
-  animation: jump-1 1.3s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+  z-index: 4;
+  animation: jump-1 1.1s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
   animation-fill-mode: both;
 }
 
@@ -41,8 +41,8 @@
   left: 80px;
   background: #fff;
   border-radius: 50%;
-  z-index: 2;
-  animation: jump-2 1.3s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+  z-index: 3;
+  animation: jump-2 1.1s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
   animation-fill-mode: both;
 }
 
@@ -54,8 +54,21 @@
   left: 65px;
   background: #fff;
   border-radius: 50%;
+  z-index: 2;
+  animation: jump-3 1.1s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+  animation-fill-mode: both;
+}
+
+.dot-4 {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 50px;
+  left: 50px;
+  background: #fff;
+  border-radius: 50%;
   z-index: 1;
-  animation: jump-3 1.3s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
+  animation: jump-4 1.1s cubic-bezier(0.21, 0.98, 0.6, 0.99) infinite alternate;
   animation-fill-mode: both;
 }
 
@@ -70,7 +83,7 @@
   }
 }
 @keyframes jump-2 {
-  0%, 40% {
+  0%, 46.6666666667% {
     box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
     transform: scale(0);
   }
@@ -80,7 +93,17 @@
   }
 }
 @keyframes jump-3 {
-  0%, 10% {
+  0%, 23.3333333333% {
+    box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
+    transform: scale(0);
+  }
+  100% {
+    box-shadow: 10px 10px 15px 0 rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+  }
+}
+@keyframes jump-4 {
+  0%, 0% {
     box-shadow: 2px 2px 3px 2px rgba(0, 0, 0, 0.2);
     transform: scale(0);
   }
