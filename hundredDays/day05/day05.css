@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:600,400");
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.3);
+  background: #42A7A1;
+  font-family: "Open Sans", Helvetica, sans-serif;
+  color: #fff;
+}
+
+.card {
+  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 280px;
+  height: 220px;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+.card .header {
+  position: relative;
+  height: 60px;
+  background: #F1BA64;
+  color: #fff;
+}
+.card .header .big {
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.card .header .small {
+  font-weight: 400;
+  font-size: 11px;
+}
+.card .header .title {
+  position: absolute;
+  top: 12px;
+  left: 15px;
+}
+.card .header .date {
+  position: absolute;
+  top: 30px;
+  left: 15px;
+}
+.card .header .type {
+  position: absolute;
+  top: 14px;
+  right: 15px;
+}
+.card .header .value {
+  position: absolute;
+  top: 28px;
+  right: 15px;
+}
+.card .parameter {
+  text-align: right;
+  padding: 10px 0 14px;
+}
+.card .parameter span {
+  position: relative;
+  font-size: 9px;
+  color: #606060;
+  padding: 0 10px 0 25px;
+}
+.card .parameter span:before {
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  content: "";
+  width: 11px;
+  height: 3px;
+  border-radius: 3px;
+}
+.card .parameter span.red:before {
+  background: #FA7373;
+}
+.card .parameter span.blue:before {
+  background: #7BA2FF;
+}
+.card .statistic {
+  position: relative;
+  height: 81px;
+  width: 260px;
+  margin: 0 auto;
+}
+.card .statistic .line-1 {
+  position: absolute;
+  height: 1px;
+  background: #f2f2f2;
+  top: 0px;
+}
+.card .statistic .line-2 {
+  position: absolute;
+  height: 1px;
+  background: #f2f2f2;
+  top: 40px;
+}
+.card .statistic .line-3 {
+  position: absolute;
+  height: 1px;
+  background: #f2f2f2;
+  top: 80px;
+}
+.card .statistic .data svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.card .statistic .data polyline {
+  fill: none;
+  stroke-width: 2;
+  stroke-linecap: round;
+}
+.card .statistic .data.red polyline {
+  stroke: #FA7373;
+}
+.card .statistic .data.blue polyline {
+  stroke: #7BA2FF;
+}
+.card .statistic .data .tooltip {
+  position: absolute;
+  bottom: 13px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-weight: 600;
+  font-size: 11px;
+  padding: 8px 6px;
+  background: transparent;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.4s ease-out;
+}
+.card .statistic .data .tooltip:after {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  left: 50%;
+  transform: translateX(-50%) rotate(45deg);
+  width: 6px;
+  height: 6px;
+}
+.card .statistic .data .point-1 {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.card .statistic .data .point-1:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.card .statistic .data .point-2 {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.card .statistic .data .point-2:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.card .statistic .data .point-3 {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.card .statistic .data .point-3:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.card .statistic .data .point-4 {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.card .statistic .data .point-4:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.card .statistic .data .point-5 {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.card .statistic .data .point-5:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.card .statistic .data .point-6 {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.card .statistic .data .point-6:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.card .statistic .data .point-7 {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.card .statistic .data .point-7:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+.card .statistic .data.red .tooltip, .card .statistic .data.red .tooltip:after {
+  background: #FA7373;
+}
+.card .statistic .data.blue .tooltip, .card .statistic .data.blue .tooltip:after {
+  background: #7BA2FF;
+}
+.card .days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  margin: 0 auto;
+}
+.card .days .day {
+  text-align: center;
+  font-size: 9px;
+  color: #949494;
+  text-transform: uppercase;
+}
+
+.chart {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.chart circle {
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=day05.css.map */

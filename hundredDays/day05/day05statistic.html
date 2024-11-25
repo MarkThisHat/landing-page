@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Day 05</title>
+
+  <link rel="stylesheet" href="day05.css">
+
+</head>
+
+<body>
+	<div class="frame">
+		<div class="card">
+			<div class="header">
+				<span class="title big">Weekly Report</span>
+				<span class="date small"></span>
+				<span class="type small">Revenue</span>
+				<span class="value big"></span>
+			</div>
+			<div class="clearfix"></div>
+
+			<div class="parameter">
+				<span class="red">Views</span>
+				<span class="blue">Purchases</span>
+			</div>
+	
+			<div class="statistic">
+				<svg class="chart">
+					<polyline class="red-line"></polyline>
+					<polyline class="blue-line"></polyline>
+				</svg>
+				<div class="data-points">
+				</div>
+			</div>
+	
+			<div class="days">
+			</div>
+		</div>
+	</div>
+	
+	<script src="day05.js"></script>
+</body>
+
+
+<!-- Sass comand for live coding:
+
+sass --watch day05statistic.scss:day05.css
+
+-->
